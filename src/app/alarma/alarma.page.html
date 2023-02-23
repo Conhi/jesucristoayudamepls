@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Alarma</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngFor="let opt of alarmlist" [routerLink]="['/home']">
+      <ion-avatar slot="start">
+        <ion-img [src]="opt.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{opt.title}}
+      </ion-label> 
+    </ion-item>
+
+    <ion-item *ngFor="let opt of crearalarm" [routerLink]="['/crearalarma']">
+      <ion-avatar slot="start">
+        <ion-img [src]="opt.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{opt.title}}
+      </ion-label> 
+    </ion-item>
+</ion-content>
